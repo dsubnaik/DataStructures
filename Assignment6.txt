@@ -1,0 +1,18 @@
+Problem 2
+17, 39, 55, 81, 23, 66, 56, 49, 65, 96, 6, 101, 59, 26, 37
+After one call: 37, 39, 23, 17, 6, 26, 49, 81, 65, 96, 55, 101, 59, 66, 56
+After two call: 56, 39, 23, 17, 6, 26, 49, 37, 65, 55, 59, 66, 81, 101, 96
+
+Problem 3: 
+List:  46->34->19->66->27->56->18->13->NULL
+Divide Phase:
+46->34->19->66->NULL                                       27->56->18->13->NULL
+Divide again:
+46->34->NULL    19->66->NULL                               27->56->NULL    18->13->NULL
+Divide Again:
+46->NULL 34->NULL 19->NULL 66->NULL                        27->NULL 56->NULL 18->NULL 13->NULL
+Sorting/Conquer Phase:
+Sort 46 and 34:     34->46->NULL                           Sort 27 and 56: 27->56->NULL
+Sort (34,46) and 19:    19->34->46->NULL                   Sort (27,56) and 18: 18->27->56->NULL
+Sort (19,34,36) and 66: 19->34->46->66->NULL               Sort (18,27,36) and 13: 13->18->27->56->NULL
+Sort (19,34,46,66) and (13,18,27,56):  13->18->19->27->34->46->56->66->NULL
